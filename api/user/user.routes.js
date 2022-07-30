@@ -7,7 +7,7 @@ router.get('/', requireAuth, getUsers)
 router.get('/:id', requireAuth, getUser)
 router.post('/add', requireAuth, requireAdmin, addUser)
 router.put('/:id', requireAuth, requireAdmin, updateUser)
-router.put('/friendsList/:id', updateUser)
+router.put('/friendsAndMsg/:id', requireAuth, updateUser)
 router.delete('/:id', requireAuth, requireAdmin, deleteUser)
 
 module.exports = router
